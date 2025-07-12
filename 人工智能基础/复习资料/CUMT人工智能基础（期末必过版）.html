@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8"> 
+  <link rel="canonical" href="https://blog.csdn.net/Luxmlb/article/details/131176171"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <meta name="renderer" content="webkit"> 
+  <meta name="force-rendering" content="webkit"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="report" content="{&quot;pid&quot;: &quot;blog&quot;, &quot;spm&quot;:&quot;1001.2101&quot;}"> 
+  <meta name="referrer" content="always"> 
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="alternate" media="handheld" href="#">  
+  <meta name="applicable-device" content="pc"> 
+  <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon"> 
+  <title>CUMT人工智能基础（期末必过版）_人工智能基础期末-CSDN博客</title>  
+  <meta name="keywords" content="人工智能基础期末"> 
+  <meta name="csdn-baidu-search" content="{&quot;autorun&quot;:true,&quot;install&quot;:true,&quot;keyword&quot;:&quot;人工智能基础期末&quot;}"> 
+  <meta name="description" content="文章浏览阅读4.1k次，点赞36次，收藏95次。本文提供了矿大AI课程期末考试的复习重点，涵盖了人工智能定义、知识表示、确定性推理、搜索策略、不确定推理和机器学习等内容。重点包括图灵测试、命题逻辑、一阶谓词逻辑、搜索算法如宽度优先和深度优先、不确定推理中的主观贝叶斯方法，以及机器学习中的ID3决策树算法。文章还给出了各章的考试题型和复习建议。"> 
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/detail_enter-351df2a831.min.css">  
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-sea/skin-sea-d3a08c2048.min.css">    
+  <meta name="toolbar" content="{&quot;type&quot;:&quot;0&quot;,&quot;fixModel&quot;:&quot;1&quot;}">    
+  <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css"> 
+  <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>      
+ 	<style>
+	main div.blog-content-box pre {
+		max-height: 100%;
+		overflow-y: hidden;
+	}
+	</style>
+ </head>  
+ <body class="nodata  " style=""> 
+  <div id="toolbarBox" style="min-height: 48px;"></div>    
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css"> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css"> 
+  <link rel="stylesheet" href="https://g.csdnimg.cn/lib/swiper/6.0.4/css/swiper.css">   
+  <div class="main_father clearfix d-flex justify-content-center mainfather-concision" style="height:100%;"> 
+   <div class="container clearfix container-concision" id="mainBox">  
+    <main>  
+     <div class="blog-content-box"> 
+      <div class="article-header-box"> 
+       <div class="article-header"> 
+        <div class="article-title-box"> 
+         <h1 class="title-article" id="articleContentId">CUMT人工智能基础（期末必过版）</h1> 
+        </div> 
+        <div class="article-info-box"> 
+         <div class="article-bar-top"> 
+          <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt=""> 
+          <div class="bar-content"> 
+           <a href="https://mall.csdn.net/vip" data-report-query="spm=3001.10404" data-report-click="{&quot;spm&quot;:&quot;3001.10404&quot;}" data-report-view="{&quot;spm&quot;:&quot;3001.10404&quot;}" class="article-vip-box" target="_blank"><img class="article-vip-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/identityVipNew.png" alt=""></a> 
+           <a class="follow-nickName " href="https://blog.csdn.net/Luxmlb" target="_blank" rel="noopener" title="Luxmlb">Luxmlb</a> 
+           <img class="article-time-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUpTime2.png" alt=""> 
+           <span class="time">已于&nbsp;2023-07-14 16:43:10&nbsp;修改</span> 
+           <div class="read-count-box"> 
+            <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png" alt=""> 
+            <span class="read-count">阅读量4.1k</span> 
+            <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}"> <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png" alt=""> <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive2.png" alt=""> <span class="name">收藏</span> <span class="get-collection"> 95 </span> </a> 
+            <div class="read-count-box is-like" data-type="top"> 
+             <img class="article-read-img article-heard-img" style="display:none" id="is-like-imgactive-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2023Active.png" alt=""> 
+             <img class="article-read-img article-heard-img" style="display:block" id="is-like-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2023Black.png" alt=""> 
+             <span class="read-count" id="blog-digg-num">点赞数 36 </span> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="blog-tags-box"> 
+          <div class="tags-box artic-tag-box"> 
+           <span class="label">分类专栏：</span> 
+           <a class="tag-link" href="https://blog.csdn.net/luxmlb/category_12345227.html" target="_blank" rel="noopener">计算机工科课程集</a> 
+           <span class="label">文章标签：</span> 
+           <a rel="noopener" data-report-query="spm=1001.2101.3001.4223" data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;人工智能&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;人工智能\&quot;}&quot;}" data-report-view="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;人工智能&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;extra&quot;:&quot;{\&quot;searchword\&quot;:\&quot;人工智能\&quot;}&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD&amp;t=all&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=&amp;from_tracking_code=tag_word&amp;from_code=app_blog_art" target="_blank">人工智能</a> 
+          </div> 
+         </div> 
+         <div class="up-time">
+          <span>于&nbsp;2023-07-01 19:22:13&nbsp;首次发布</span>
+         </div> 
+         <div class="slide-content-box"> 
+          <div class="article-copyright"> 
+           <div class="creativecommons">
+             版权声明：本文为博主原创文章，遵循
+            <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。 
+           </div> 
+           <div class="article-source-link">
+             本文链接：
+            <a href="https://blog.csdn.net/Luxmlb/article/details/131176171" target="_blank">https://blog.csdn.net/Luxmlb/article/details/131176171</a> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="operating"> 
+          <a class="href-article-edit slide-toggle">版权</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="blogHuaweiyunAdvert" class=""></div> 
+      <div class="ai-abstract-box"> 
+       <div class="ai-abstract"> 
+        <div class="abstract-content"> 
+         <img class="lock-img" src="https://img-home.csdnimg.cn/images/20240711042549.png" alt=""> 本文提供了矿大AI课程期末考试的复习重点，涵盖了人工智能定义、知识表示、确定性推理、搜索策略、不确定推理和机器学习等内容。重点包括图灵测试、命题逻辑、一阶谓词逻辑、搜索算法如宽度优先和深度优先、不确定推理中的主观贝叶斯方法，以及机器学习中的ID3决策树算法。文章还给出了各章的考试题型和复习建议。 
+        </div> 
+        <p> 摘要生成于 <a href="https://ai.csdn.net?utm_source=cknow_pc_ai_abstract" data-report-query="spm=3001.10128" data-report-view="{&quot;spm&quot;:&quot;3001.10128&quot;,&quot;extra&quot;:{&quot;location&quot;:&quot;ai_abstract&quot;}}" data-report-click="{&quot;spm&quot;:&quot;3001.10128&quot;,&quot;extra&quot;:{&quot;location&quot;:&quot;ai_abstract&quot;,&quot;text&quot;:&quot;C知道&quot;}}" target="_blank"> C知道</a> ，由 DeepSeek-R1 满血版支持， <a href="https://ai.csdn.net?utm_source=cknow_pc_ai_abstract" data-report-query="spm=3001.10128" data-report-click="{&quot;spm&quot;:&quot;3001.10128&quot;,&quot;extra&quot;:{&quot;location&quot;:&quot;ai_abstract&quot;,&quot;text&quot;:&quot;前往体验&quot;}}" target="_blank"> 前往体验 &gt;</a></p> 
+       </div> 
+      </div> 
+      <article class="baidu_pl"> 
+       <div id="article_content" class="article_content clearfix"> 
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/kdoc_html_views-1a98987dfd.css"> 
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-704d5b9767.css"> 
+        <div id="content_views" class="htmledit_views atom-one-dark"> 
+         <h2>easy</h2> 
+         <h2><img alt="" height="467" src="https://i-blog.csdnimg.cn/blog_migrate/ea236a6b8a85672b89fbdd8ac40e2384.png" width="1200"></h2> 
+         <h2>本笔记适用于<span style="color:#fe2c24;">以下教材</span>应付期末考试</h2> 
+         <p><img alt="" height="596" src="https://i-blog.csdnimg.cn/blog_migrate/7a59554b3464bfdc64a8631ace8b2c48.png" width="1030"></p> 
+         <h2>矿大2022年考试题型以及复习重点总结</h2> 
+         <pre><code  style="height: 50vh;">1.单选题（20分）（10小题）
+2.简答题（30分）
+3.计算题（15分）
+4.证明推理题（15分）
+5.综合推理题（20分）
+
+===========第一章 绪论=======================
+
+人工智能定义
+
+人工智能的概念（1956提出...）
+
+图灵测试
+
+人工智能产生和发展：几个重要时期（每个时期代表性的成果知道1到2个即可）
+
+人工智能三大学派：是什么，每个学派主要观点，能够根据观点区分是哪一个学派。
+
+人工智能主要应用领域：能够列举几个。以下属于人工智能应用的领域能够区别。
+
+
+================第二章 知识表示====================
+
+
+命题的含义和相关概念：所有命题都应该具有确定的真值
+当命题变元表示原子命题的时候该变元称之为原子变元
+
+用谓词逻辑能够表示实际场景（见作业习题）
+
+一阶谓词逻辑表示法的优缺点是什么
+
+产生式表示法不考
+
+语义网络表示法：（见作业习题） 知道基本的语义关系，比如哪些是有继承性的。
+
+语义网络的推理不考
+
+框架表示法不考
+
+
+================第三章 确定性推理====================
+
+
+推理概述了解
+
+这一章主要考证明题
+
+字句 字句集 
+
+给出一系列谓词公式能够转化为相应字句集（见课后习题）
+
+谓词公式的化简
+
+鲁滨逊归结原理：例题3.1 已知f是什么d是什么 求证什么推论。知道具体的逻辑步骤。归结出空子句。
+
+例 3.11 例 3.12  （比如王喜欢花生的问题）
+
+归结演绎推理的演绎策略能够列举出来两到三个
+
+
+================第四章 搜索策略=====================
+
+
+盲目搜索和启发式搜索的问题
+
+
+一般图搜索中的状态空间搜索（传教士和野人问题）：用哪个结构来描述问题的状态
+
+（传教士和野人问题）能够根据问题的描述，要能识别出合法状态和不合法状态
+
+
+状态空间搜索的基本思想 P90
+
+
+盲目搜索必考：
+
+	宽度优先和深度优先的区别，比如可以用OPEN表的排序来区别两种搜索策略的异同
+
+	深度优先搜索的一些改进比如有界深度和迭代加深在哪些地方进行了改进，改进的效果怎么样？
+
+	这几种搜索策略之间的比较：哪些用的时间多，哪些用的空间大（书上表4.2）
+
+
+启发式搜索
+	重点：评估函数定义式，每一项代表的含义。
+
+
+启发式搜索算法
+	适当的修改和标记指针，为什么要修改和标记指针？
+	修改和标记指针出现的几种情况：出现在OPEN表的情况，没出现在OPEN表的情况，出现在CLOSE表的情况，对应指针的变化
+
+
+实现启发式搜索的三个因素
+
+
+启发式函数的强弱及其影响：比如h(x)的强弱对评价函数到底是怎么影响的？
+
+
+回溯策略和爬山法（知道概念即可）
+
+
+问题规约（知道概念即可）
+
+
+与或图的启发式搜索（对比A和A*算法的异同：多个方面：搜索结果 OPEN表等）
+
+
+博弈（重点掌握极大极小过程，给出一个博弈树以及估值函数能够倒推值：见课后习题）
+
+
+阿尔法β过程选择题（max的a值永不降低 ， min节点的贝塔永不增加）
+
+8数码的启发式搜索：给一个八数码问题的初始状态，再给一个结束的目标状态，通过启发式搜索设计评价函数来完成搜索函数（画出搜索树）
+
+
+
+================第五章 不确定推理======================
+
+主要考计算题
+
+主观贝叶斯方法（给出充分性因子和必要性因子能够根据公式计算先验概率和后验概率）
+
+LS LN的性质和关系
+
+书上5.3 和 5.4例题需要掌握
+
+确定性理论：可信度的定义 性质 取值的值域 其几个典型值代表的含义
+
+书上的例5.6 5.7 例题需要掌握
+
+证据理论：能够计算相应的似然函数（14.24） 大题不考
+
+
+=================第六章 机器学习=========================
+
+
+学习系统的基本模型 由几部分构成，几个部分的联系
+
+机器学习的历史和分类（比如能区分监督学习和无监督学习）
+
+计算题：决策树 ID3算法 （给你几个虚拟样本-通过M（C） B（C，A）来确定根节点。</code ></pre> 
+         <h4></h4> 
+         <h2>本笔记食用方法：</h2> 
+         <ul>
+          <li><strong>第一章和第四章就按照我的博客笔记来看就够了（因为第一章主要是考一些选择题概念）</strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（第四章博客总结是按照期末考点来总结的）</strong></li>
+          <li><strong>第二章、第三章、第五章、第六章直接看最后的手写笔记部分即可（基本都是刷题）</strong></li>
+          <li><strong>每一章我都会在前面说明该章节的考试题型</strong></li>
+          <li><strong>博客笔记主要强调概念，手写笔记相当于思维导图（手写笔记中会提到某些概念，这时候可以参考博客笔记。两个兼修即可。）</strong></li>
+         </ul> 
+         <p></p> 
+         <h2><strong>小tips:建议在电脑上阅览，或者宽屏阅览（因为手机或者较小的显示屏会导致一定的格式错误）</strong></h2> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">==================第1章 绪论======================</span></h2> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">这一章主要理解几个概念和定义即可，主要考选择题</span></h2> 
+         <p></p> 
+         <h3>1.1人工智能定义</h3> 
+         <p><img alt="" height="207" src="https://i-blog.csdnimg.cn/blog_migrate/969bd2ab0ece601eb484f02931bc6423.png" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="226" src="https://i-blog.csdnimg.cn/blog_migrate/d0be775947673da63553f634aa3efacd.png" width="1200"></p> 
+         <p></p> 
+         <p><strong>人工智能的概念（1956提出...）</strong></p> 
+         <p></p> 
+         <h3>1.2 图灵测试</h3> 
+         <p><img alt="" height="608" src="https://i-blog.csdnimg.cn/blog_migrate/e5e3d6dcecf6d0bd150056802e86c2fe.png" width="1200"></p> 
+         <p></p> 
+         <h3>1.3 人工智能产生和发展：几个重要时期（每个时期代表性的成果知道1到2个即可）</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;<strong> 孕育期：神经网络模型、宏观人工智能、图灵测试</strong></p> 
+         <p>·&nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="206" src="https://i-blog.csdnimg.cn/blog_migrate/2f776526f88fd82509a74277c9c4c685.png" width="484"></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; <strong>形成期：</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="183" src="https://i-blog.csdnimg.cn/blog_migrate/3f82cb76e6f4a6d9c8231860ea887b9b.png" width="507"></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp;<strong> &nbsp; &nbsp; 暗淡期：</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="152" src="https://i-blog.csdnimg.cn/blog_migrate/c1a5cce10e491e53ee5cbbc46998b2cd.png" width="519"></p> 
+         <p></p> 
+         <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; 知识期：</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="152" src="https://i-blog.csdnimg.cn/blog_migrate/d94763d36c1ba452258c00bf149f7373.png" width="562"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="197" src="https://i-blog.csdnimg.cn/blog_migrate/1c76403f2259d196868a41714a2f1b93.png" width="565"></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp; &nbsp;<strong> &nbsp; 稳步增长期：</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="120" src="https://i-blog.csdnimg.cn/blog_migrate/f56b33266c2376455bb6a118a346de82.png" width="542"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <p></p> 
+         <h3>1.4 人工智能三大学派：是什么，每个学派主要观点，能够根据观点区分是哪一个学派。</h3> 
+         <h4>&nbsp; &nbsp; &nbsp;<strong> &nbsp; 符号主义：</strong></h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="56" src="https://i-blog.csdnimg.cn/blog_migrate/d9086811776416dd037c70ef7208809a.png" width="573"></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 缺点：</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="102" src="https://i-blog.csdnimg.cn/blog_migrate/5784b55b9ec304a08b6d2e7d62c23ff6.png" width="515"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; <strong>&nbsp; 连接主义：</strong></h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="179" src="https://i-blog.csdnimg.cn/blog_migrate/beb9fe64177858ed4abe01ed6d0b36c1.png" width="568"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; 行为主义：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="87" src="https://i-blog.csdnimg.cn/blog_migrate/1afaa91fe617cb5b59ea0dc6c3bcc11a.png" width="622"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <p></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp;</p> 
+         <p></p> 
+         <h3>1.5 人工智能主要应用领域</h3> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提问方式：以下属于人工智能应用的领域的是？</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="229" src="https://i-blog.csdnimg.cn/blog_migrate/0e7f0e6e19d71af550c5a3cca8eb9d78.png" width="525"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="217" src="https://i-blog.csdnimg.cn/blog_migrate/ca157243f326644368b20fff4b931cc2.png" width="524"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="196" src="https://i-blog.csdnimg.cn/blog_migrate/5c014041ec1f7bd30e7e9ff3a16c2063.png" width="526"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="254" src="https://i-blog.csdnimg.cn/blog_migrate/402b3af1399f674e3baefb3fbe4c6b3c.png" width="522"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="206" src="https://i-blog.csdnimg.cn/blog_migrate/35021d75977f297d64712e73ccdb11ea.png" width="523"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="245" src="https://i-blog.csdnimg.cn/blog_migrate/9b73124c16865c9c2bd8a87958756ba5.png" width="525"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="216" src="https://i-blog.csdnimg.cn/blog_migrate/e5402c659acc7cdf42bd8874bd6aaabf.png" width="533"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="209" src="https://i-blog.csdnimg.cn/blog_migrate/ccbd257679ce3f20728cb9ca894bf372.png" width="538"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="240" src="https://i-blog.csdnimg.cn/blog_migrate/6877fd44db184d8078c20f0b168f82d6.png" width="540"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="183" src="https://i-blog.csdnimg.cn/blog_migrate/d5de4fb2a54694871d2793ef681f82bc.png" width="548"></p> 
+         <p></p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">==================第2章 知识表示===================</span></h2> 
+         <p></p> 
+         <h3><span style="color:#fe2c24;">这一章主要考谓词表示法（给你一句话，让你用符号表示），语义网络（参考博客笔记中的例子，一定要把这些例子（4.5 ~ 4.7）都弄懂！！！），以简答题的形式出现。</span></h3> 
+         <p></p> 
+         <h2>1 命题的含义以及相关概念</h2> 
+         <h3>1.1.命题的定义</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="305" src="https://i-blog.csdnimg.cn/blog_migrate/7de145d0b5f4a6a87065b5a6a18bdd13.png" width="494"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="249" src="https://i-blog.csdnimg.cn/blog_migrate/c93972a09563d09e3021b81c0f287b3f.png" width="508"></p> 
+         <p></p> 
+         <h3>1.2. 命题的类型：</h3> 
+         <p><span style="color:#fe2c24;"><strong>当命题变元表示原子命题的时候该变元称之为原子变元</strong></span></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="234" src="https://i-blog.csdnimg.cn/blog_migrate/c9ca3ebb7f749adcd7e1aee25a5adc25.png" width="515">&nbsp;</p> 
+         <p></p> 
+         <h3><strong>1.3.相关概念</strong></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="218" src="https://i-blog.csdnimg.cn/blog_migrate/6dd0ef6e7543ef56213026631e8a7a56.png" width="484"></p> 
+         <h3><strong>1.4.注意点</strong></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="234" src="https://i-blog.csdnimg.cn/blog_migrate/244bab22fe19542f1aea660d97be7189.png" width="451"></p> 
+         <p></p> 
+         <h3><strong>1.5.真值表</strong></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="313" src="https://i-blog.csdnimg.cn/blog_migrate/5077c17926723f4975b45b17f28f4747.png" width="496"></p> 
+         <p></p> 
+         <h2>2 谓词逻辑</h2> 
+         <p></p> 
+         <h3>2.1.命题逻辑的缺陷 从而发展出谓词逻辑</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="251" src="https://i-blog.csdnimg.cn/blog_migrate/b936a4bb76bf4982aca6455947b7b14e.png" width="416"></p> 
+         <p></p> 
+         <h3>2.2.语法</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="231" src="https://i-blog.csdnimg.cn/blog_migrate/ae3717fc80159cf8be1ebede04eecc73.png" width="420"></p> 
+         <h4></h4> 
+         <h3>2.3.语法元素</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="252" src="https://i-blog.csdnimg.cn/blog_migrate/2fa3fabea0f7c8758c414a6802423e1e.png" width="378"></p> 
+         <h3>2.4.谓词的阶</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="265" src="https://i-blog.csdnimg.cn/blog_migrate/b924fd2b1b930af203f3a913052158ce.png" width="455"></p> 
+         <h3>2.5.项</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="226" src="https://i-blog.csdnimg.cn/blog_migrate/b3aea70b3dbb6c939063155356ff10a2.png" width="525"></p> 
+         <p></p> 
+         <h3>2.6.原子公式（注意大小写规则）</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="275" src="https://i-blog.csdnimg.cn/blog_migrate/ade14c3604320d27f4c898a8a87a76e3.png" width="439"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="255" src="https://i-blog.csdnimg.cn/blog_migrate/ef0c5284cbfa6d29370e0fbf74ec241e.png" width="464"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="196" src="https://i-blog.csdnimg.cn/blog_migrate/da5c7631916e9bca3da19376a3bd1679.png" width="459"></p> 
+         <h3>2.7.表示范围</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="292" src="https://i-blog.csdnimg.cn/blog_migrate/2e67c01b66bf1c80e4c8d0292ff1ecac.png" width="479"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="204" src="https://i-blog.csdnimg.cn/blog_migrate/9d8eedabe4c66abc772a27b34a63ae85.png" width="464"></p> 
+         <p></p> 
+         <h3>2.8.谓词逻辑的表示步骤</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="198" src="https://i-blog.csdnimg.cn/blog_migrate/cf114f763d2c1ff8e32166ee6c0ba15e.png" width="502"></p> 
+         <p></p> 
+         <h3>2.9.例子</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="517" src="https://i-blog.csdnimg.cn/blog_migrate/3dc70e9d3e2f6f5cfb53a04d32f8dd35.jpeg" width="471"></p> 
+         <p></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="336" src="https://i-blog.csdnimg.cn/blog_migrate/e8cac28548a6ad0eec34b0037b94b9bd.png" width="518"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="282" src="https://i-blog.csdnimg.cn/blog_migrate/01b77d596771b5bb939c75c934b78eb7.png" width="522"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="232" src="https://i-blog.csdnimg.cn/blog_migrate/3c9e28d61f968a94827b7d29656bf1dc.png" width="527"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="336" src="https://i-blog.csdnimg.cn/blog_migrate/f041b72e42c93da9f56ac5a7f504a6ce.png" width="532"></p> 
+         <h4></h4> 
+         <h2>3.一阶谓词逻辑表示法的优缺点&nbsp;</h2> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 优点：（“ 知 实 严 自 通 ” ）</h3> 
+         <p>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="287" src="https://i-blog.csdnimg.cn/blog_migrate/f8f6e6727c30c6eea5c4336ff635355b.png" width="579"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 缺点：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="400" src="https://i-blog.csdnimg.cn/blog_migrate/13ef65ea2f7a75a68b10d05c6d546cca.png" width="586"></p> 
+         <p></p> 
+         <h2>4 语义网络</h2> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1.基本概念，整体框架：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="330" src="https://i-blog.csdnimg.cn/blog_migrate/cb8bbfc8a9cb8095751894ea0596c6c5.png" width="522"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2.节点间的基本关系</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="258" src="https://i-blog.csdnimg.cn/blog_migrate/d4e25f38c74ccde24f93be74943c520f.png" width="516"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.3.语义基元和语义网络</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="144" src="https://i-blog.csdnimg.cn/blog_migrate/313f65124737a01e638824b655566d74.png" width="517">&nbsp;</p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.4.从一些基本的语义关系可以构成复杂的语义关系：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="532" src="https://i-blog.csdnimg.cn/blog_migrate/aa3479f564108472f7ba2f7ccbb3f955.jpeg" width="399"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.5.语义网络的表示步骤</h3> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）.事实性知识</h4> 
+         <p><img alt="" height="114" src="https://i-blog.csdnimg.cn/blog_migrate/8b47b789a1b69fe1d86e5bab16baae45.png" width="989"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="364" src="https://i-blog.csdnimg.cn/blog_migrate/eeecd526d9c4b890a8d450764ddb1ce8.png" width="573"></p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）情况节点：</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="388" src="https://i-blog.csdnimg.cn/blog_migrate/e877d72bf689df48a7406bf9a0c279b7.png" width="577"></p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）动作的表示：</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="338" src="https://i-blog.csdnimg.cn/blog_migrate/eaa7edaba8449ac2f589af6d8984e7e0.png" width="550">&nbsp;</p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4） 事件的表示：</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="352" src="https://i-blog.csdnimg.cn/blog_migrate/24d8d800d4239fe2fbed973e211add93.png" width="557"></p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)存在量词和全称量词的表示</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="361" src="https://i-blog.csdnimg.cn/blog_migrate/5e746162e1d71cc28e9864b8ae595f50.png" width="604"></p> 
+         <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如：</h5> 
+         <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.</h6> 
+         <h6>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="352" src="https://i-blog.csdnimg.cn/blog_migrate/56c091275c6bb2fa7b0500a3e7e8282f.png" width="585">&nbsp;&nbsp;&nbsp;</h6> 
+         <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.</h6> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="381" src="https://i-blog.csdnimg.cn/blog_migrate/483772dbec2a242a5b7239f602bbac88.png" width="585"></p> 
+         <p></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 4.6.语义网络的推理步骤</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="316" src="https://i-blog.csdnimg.cn/blog_migrate/64d5f0e96a59ebed92e9dc9b5efb7368.png" width="520">&nbsp;</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="316" src="https://i-blog.csdnimg.cn/blog_migrate/b4ecaa230df478df07b99b972bf552d6.png" width="524"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.7.具体实例</h3> 
+         <h4>1.</h4> 
+         <p><img alt="" height="388" src="https://i-blog.csdnimg.cn/blog_migrate/885e0d3530e9d1b38de7e57358092c76.png" width="1200"></p> 
+         <p><img alt="" height="573" src="https://i-blog.csdnimg.cn/blog_migrate/bcd232b173173d621358f3d1541cb3c9.png" width="1200"></p> 
+         <p><img alt="" height="1007" src="https://i-blog.csdnimg.cn/blog_migrate/2d34f22b8b60d7ad1efc75791b5b59e3.png" width="1200"></p> 
+         <h4>2.</h4> 
+         <p><img alt="" height="194" src="https://i-blog.csdnimg.cn/blog_migrate/84d563fe8ca12409a0c24a7c57765fb8.png" width="1200"></p> 
+         <p><img alt="" height="136" src="https://i-blog.csdnimg.cn/blog_migrate/33aa7c96db86442bf1c19d3be2503e14.png" width="1200">&nbsp;<img alt="" height="687" src="https://i-blog.csdnimg.cn/blog_migrate/6baf407dbe895b832e275f1fa012f500.png" width="1200"></p> 
+         <p><img alt="" height="843" src="https://i-blog.csdnimg.cn/blog_migrate/117041751cd202dedaa7581f14fca3c3.png" width="1200"></p> 
+         <h4>&nbsp;3.<img alt="" height="912" src="https://i-blog.csdnimg.cn/blog_migrate/6097142986d0576cc2113cd7439e3c2c.png" width="1200"></h4> 
+         <h4></h4> 
+         <h4>4.</h4> 
+         <p><img alt="" height="861" src="https://i-blog.csdnimg.cn/blog_migrate/deb1f661ee50fbff814f0bee703afe18.png" width="1200"></p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">==================第三章 确定性推理=================</span></h2> 
+         <h2><span style="color:#fe2c24;">这一章主要考察的就是归结反演，前面的合式公式标准化都是为最后的归结反演铺垫，这章主要以证明推理的题给出，一定要掌握合式公式的标准化过程（我们考试的时候单独考察了5分，手写笔记里面有例子），然后就是掌握归结反演的基本步骤（我在笔记里面有总结）</span></h2> 
+         <p></p> 
+         <h3>合式公式标准化过程：&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="332" src="https://i-blog.csdnimg.cn/blog_migrate/3e407c2703586508243c4f79cf8d9999.png" width="483"></p> 
+         <p></p> 
+         <h3>Skolem变换的具体原则：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="278" src="https://i-blog.csdnimg.cn/blog_migrate/a136e2addeb58ba445647607a0b8752c.png" width="444"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="288" src="https://i-blog.csdnimg.cn/blog_migrate/b7cb3923c9b1a50070e51958bb7abdf2.png" width="442"></p> 
+         <p></p> 
+         <h3><span style="background-color:#ed7976;">归结反演的基本步骤</span></h3> 
+         <p><img alt="" height="880" src="https://i-blog.csdnimg.cn/blog_migrate/5e27bbbc446507b7516a753c6b26374b.png" width="1200"></p> 
+         <p></p> 
+         <h3><strong>归结反演的基本过程（现成的子句集）</strong></h3> 
+         <p><img alt="" height="92" src="https://i-blog.csdnimg.cn/blog_migrate/56ae00ec872e8725fb655bdfe0795721.png" width="1200"></p> 
+         <p><img alt="" height="906" src="https://i-blog.csdnimg.cn/blog_migrate/aa88e52f007553181ad664fb51931087.png" width="1200"></p> 
+         <p></p> 
+         <h3>归结反演过程中可利用置换和合一</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="94" src="https://i-blog.csdnimg.cn/blog_migrate/2091571e0bce71795a520ae2ebf7a29f.png" width="496"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="232" src="https://i-blog.csdnimg.cn/blog_migrate/a11e25a2a591a86d2fa9f53c4ab01f11.png" width="497"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="70" src="https://i-blog.csdnimg.cn/blog_migrate/7b65533b42f5c5c20d99488c1c9f4978.png" width="495"></p> 
+         <p></p> 
+         <h3>&nbsp;置换和合一的具体使用场景：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="266" src="https://i-blog.csdnimg.cn/blog_migrate/98718ecdd2d9cb85dd85ae2b1d554bc6.png" width="495"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="285" src="https://i-blog.csdnimg.cn/blog_migrate/edccc69b424fc4c6390782039ce6f8d9.png" width="497"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="279" src="https://i-blog.csdnimg.cn/blog_migrate/8d2e758048b66c0bd79a064edbcd3ba7.png" width="495"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="279" src="https://i-blog.csdnimg.cn/blog_migrate/192698e735f573d7010818058d007a9a.png" width="495"></p> 
+         <p></p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;"><strong>==================第4章 搜索策略===================</strong></span></h2> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">这一章主要出现在最后的综合题中，考察利用改进启发式搜索解决八数码问题，主要一定要掌握启发式搜索和改进启发式搜索解决八数码问题，改进启发式搜索只是把启发式函数换了一下，更加合理。然后还考察一些选择题，考察的选择题基本都是考点笔记里面强调的内容（注意博客笔记就行了）。还有博弈中会考一个博弈树极大极小过程（看最后一道博弈练习题即可）</span></h2> 
+         <p></p> 
+         <h2>4.1 搜索概述</h2> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;问题求解系统</h3> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;知识贫乏系统：</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;知识丰富系统：</p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两大类搜索技术</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一般图搜索，启发式搜索 （状态空间搜索）</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 状态空间搜索是用状态空间法来求解问题所进行的搜索。</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 与或图搜索</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 与或图搜索是用问题规约的方法来求解问题所进行的搜索。</p> 
+         <p></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启发式搜索和盲目搜索理解要点：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="259" src="https://i-blog.csdnimg.cn/blog_migrate/183373f5d82598ebb41bd2f2b2cd96d6.png" width="555"></p> 
+         <p></p> 
+         <h2>4.2 一般图（或图）搜索（利用状态空间）</h2> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;</p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 实质：<span style="background-color:#ed7976;">状态空间</span>的表示必须有状态和操作算子</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="289" src="https://i-blog.csdnimg.cn/blog_migrate/7fc68c301386b500b925b340d01c2acf.png" width="490"></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp;<span style="background-color:#ed7976;"> 表示形式：（有向图）</span></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="360" src="https://i-blog.csdnimg.cn/blog_migrate/534c2f0bb774c3a38cc87784f88bc4c1.png" width="493"></p> 
+         <p></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 状态空间搜索的表示：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="261" src="https://i-blog.csdnimg.cn/blog_migrate/8d4752dc47dcf29e7a6eb855b78773a6.png" width="549"></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="background-color:#ed7976;">传教士和野人过河问题</span></h3> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 题目描述：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="249" src="https://i-blog.csdnimg.cn/blog_migrate/9da1c3d0bddd4abbf60a92765db78c65.png" width="526"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="background-color:#ed7976;"> 状态的表示：</span></h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="251" src="https://i-blog.csdnimg.cn/blog_migrate/c9f86da982e08466190b590cf14a5b60.png" width="531"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="58" src="https://i-blog.csdnimg.cn/blog_migrate/3b314515d5217101bb3c6ce2851f1b95.png" width="531"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;操作算子：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="218" src="https://i-blog.csdnimg.cn/blog_migrate/660e3201aaa6555d341a88ba9a772853.png" width="528"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="background-color:#ed7976;">合法状态和不合法状态：</span></h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="333" src="https://i-blog.csdnimg.cn/blog_migrate/ec72f83d2208157e88a20b68c981f9d0.png" width="525"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color:#ed7976;">状态空间搜索思想：</span></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="51" src="https://i-blog.csdnimg.cn/blog_migrate/432845f10493b38eacd3e9442db140d4.png" width="561"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="157" src="https://i-blog.csdnimg.cn/blog_migrate/c058a34c1d4a77b68b805298573d41eb.png" width="562"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="272" src="https://i-blog.csdnimg.cn/blog_migrate/6c9c095fc062c4cdd71277370161191f.png" width="505"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="305" src="https://i-blog.csdnimg.cn/blog_migrate/aded75e542ae3ecf0aa15ff44843af40.png" width="503"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;或图基本概念：</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="246" src="https://i-blog.csdnimg.cn/blog_migrate/e7e3fb58b036c7bc55349b3a1385166e.png" width="516"></p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态空间一般表示为或图</h4> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;八数码问题的求解就是用或图来求解的：</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;求解步骤就是状态空间搜索的设计过程。</p> 
+         <p></p> 
+         <h3><span style="color:#fe2c24;"><strong>一般图的搜索算法（考点）：</strong></span></h3> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; 符号说明：</h4> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="179" src="https://i-blog.csdnimg.cn/blog_migrate/0a639d7e4ce5c0bd73128f9bb954b5dd.png" width="535"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; 搜索算法的两个阶段：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="130" src="https://i-blog.csdnimg.cn/blog_migrate/1dafbf83d19ce395a75bde33ebc75c5c.png" width="493">&nbsp;</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="248" src="https://i-blog.csdnimg.cn/blog_migrate/ec18a8be74f964f0d858e9d81fea8e62.png" width="498"></p> 
+         <h4>&nbsp;&nbsp;&nbsp;</h4> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;八数码问题（了解基本过程即可，最后有相应习题）：&nbsp;</h4> 
+         <div class="csdn-video-box" data-report-view="{&quot;spm&quot;:&quot;3001.10261&quot;,&quot;extra&quot;:{&quot;id&quot;:&quot;lMkGhAxq-1686644492884&quot;}}"> 
+          <iframe id="lMkGhAxq-1686644492884" frameborder="0" src="https://live.csdn.net/v/embed/304241" allowfullscreen="true" data-mediaembed="csdn"></iframe> 
+          <p>八数码问题一般图求解过程</p> 
+         </div> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/504e25bfcbb20be084bb5165e43c6154.png" width="1200"></p> 
+         <h4></h4> 
+         <h2>盲目搜索&nbsp; &nbsp;&nbsp;</h2> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如何提高一般图搜索的效率呢？</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 从上面的八数码一般图搜索的策略我们可以看出，OPEN表的首部节点的选择都是随机的</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 有一定的盲目性，为了解决这种盲目性，于是我们提出了优化OPEN表中的节点的排序方</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 式的想法：（这也是<span style="color:#fe2c24;"><strong>盲目搜索</strong></span>的来源）</p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp;&nbsp;<span style="background-color:#ed7976;">&nbsp;深度优先搜索和宽度优先搜索的区别：</span></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="182" src="https://i-blog.csdnimg.cn/blog_migrate/93fc6b975cdc9a4e803bfe05deabafcf.png" width="573">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="119" src="https://i-blog.csdnimg.cn/blog_migrate/d51808e216efa9e61536ddb3842e8a65.png" width="574"></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 宽度优先算法：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="263" src="https://i-blog.csdnimg.cn/blog_migrate/e4f8de0ba328c874d8d4ab602a6edfa6.png" width="518"></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 深度优先算法：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="265" src="https://i-blog.csdnimg.cn/blog_migrate/0aad4f3b72e022a7626771f74a8087c9.png" width="514"></p> 
+         <h3>&nbsp; &nbsp; &nbsp; <span style="background-color:#ed7976;">&nbsp; 深度优先搜索的两大改进算法：</span></h3> 
+         <h4>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有界深度优先：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="109" src="https://i-blog.csdnimg.cn/blog_migrate/251cdebd403280031072998137697b89.png" width="558"></p> 
+         <p></p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 迭代加深搜索（改进有界深度优先）：</h4> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="188" src="https://i-blog.csdnimg.cn/blog_migrate/8842d1dc246da97694c59e10913f7c76.png" width="551"></p> 
+         <p></p> 
+         <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color:#ed7976;">&nbsp;四种搜索策略的比较：</span></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="156" src="https://i-blog.csdnimg.cn/blog_migrate/9df4f910b66b1ce79ca9797543eb4a04.png" width="642"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; 时间上：深度优先最长，如果 深度限制 l&lt;解答深度 d 那么 有界深度时间最短</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; 空间上：宽带有深&nbsp;b^d&nbsp; bd b^l bm</p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;"><strong>启发式搜索</strong></span></h2> 
+         <h3>&nbsp; &nbsp; &nbsp; 概念：</h3> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过评估函数来决定每一个节点的扩展，从而避免了盲目搜索带来的空间和时间的浪</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; 费。</p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; <span style="background-color:#ed7976;">评估函数：</span></h3> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="215" src="https://i-blog.csdnimg.cn/blog_migrate/5cd515d537b75423ab1a3cf758bae18a.png" width="604"></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; 评估函数的作用：</h3> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="154" src="https://i-blog.csdnimg.cn/blog_migrate/aac86530141971578eed583e4d31bbee.png" width="590"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp;启发式知识指导OPEN表的排序：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="344" src="https://i-blog.csdnimg.cn/blog_migrate/dd023d07aae53746d0847bcc613b0308.png" width="595"></p> 
+         <p></p> 
+         <h3>&nbsp; &nbsp; &nbsp; &nbsp; A算法：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="292" src="https://i-blog.csdnimg.cn/blog_migrate/48ef2326eedcc7e3944f59feca6540d1.png" width="551"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="310" src="https://i-blog.csdnimg.cn/blog_migrate/79e04426877b8992c81738011ea434f4.png" width="541">&nbsp; &nbsp; &nbsp; &nbsp;</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;h(n) :因为依赖于启发式知识加以计算，所以h(n)又叫做启发式函数&nbsp;</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p> 
+         <h4>&nbsp; &nbsp; &nbsp; &nbsp; A算法的执行过程：</h4> 
+         <p><img alt="" height="216" src="https://i-blog.csdnimg.cn/blog_migrate/b0957a73e2fbda3490677676caec0a44.png" width="573"></p> 
+         <p></p> 
+         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="407" src="https://i-blog.csdnimg.cn/blog_migrate/d4efe10d39b1d1fe717b439b4bd9d66d.png" width="472"></h4> 
+         <p>当有多条路可走的时候 比如d(5) 和 e(5)， 这是时候就同时扩展这两个节点，然后比较这两个节点</p> 
+         <p>扩展出来的子节点，找到子节点中代价最小的那一条路继续扩展，相应的另一条路（d(5)）则是判</p> 
+         <p>断失误的路，应该舍弃。</p> 
+         <p><img alt="" height="313" src="https://i-blog.csdnimg.cn/blog_migrate/b4e5b9bdf7ad8130e42f2acde8c2a5f3.png" width="416"></p> 
+         <p></p> 
+         <h3>改进启发式函数：</h3> 
+         <p>为什么要改进呢？</p> 
+         <p>上面也看到了，改进的目的就是为了尽可能大的减少上面这种判断失误的情况。</p> 
+         <p><img alt="" height="239" src="https://i-blog.csdnimg.cn/blog_migrate/7699057cf48d304352398b8d61a4b53c.png" width="527"></p> 
+         <p></p> 
+         <h2><span style="background-color:#ed7976;">八数码问题</span></h2> 
+         <p></p> 
+         <p><span style="color:#fe2c24;"><strong>考察的方式就是题目给出初始状态和目标状态，然后给出评估函数，然后你按照下面的步骤画出状态空间搜索图即可。注意OPEN表和CLOSE表的变化（考试的时候也要求写出来）</strong></span></p> 
+         <h3>1.启发式函数搜索（h(n)为错位棋牌个数）</h3> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="261" src="https://i-blog.csdnimg.cn/blog_migrate/f10913388f1c0abfbbb3a6a718a93877.png" width="499"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="117" src="https://i-blog.csdnimg.cn/blog_migrate/b141af3177407f05cfd3d9586ddb4258.png" width="498">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="202" src="https://i-blog.csdnimg.cn/blog_migrate/579102e41f2cf94c008f3607d85b254e.png" width="495">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="308" src="https://i-blog.csdnimg.cn/blog_migrate/7f70485ef8d68f3dad6a56c53971311c.png" width="498">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="329" src="https://i-blog.csdnimg.cn/blog_migrate/49781242289c3bb26d90b4a391b5f488.png" width="499">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="299" src="https://i-blog.csdnimg.cn/blog_migrate/c69a86e84316bb15932aae9d512889ea.png" width="497">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="358" src="https://i-blog.csdnimg.cn/blog_migrate/c1157bdabc0c5b8993117759fb6ed6cb.png" width="492">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="346" src="https://i-blog.csdnimg.cn/blog_migrate/54864fa521101fbf19e7138fd2a3593c.png" width="493">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="386" src="https://i-blog.csdnimg.cn/blog_migrate/86bb3a37863583f5b6f899cc94a104f9.png" width="496">&nbsp;</p> 
+         <p></p> 
+         <h3>&nbsp; 2.改进启发式函数版本（h(n)为错位移动到正确位置所用步数）&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="263" src="https://i-blog.csdnimg.cn/blog_migrate/ea10c79b30fbc7ef9f894c5dacb7c335.png" width="483"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="172" src="https://i-blog.csdnimg.cn/blog_migrate/285db5f843accf988d742be34b09757a.png" width="490">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="219" src="https://i-blog.csdnimg.cn/blog_migrate/3c7ed012290292e4d6a5856c7fa2abb2.png" width="486">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="321" src="https://i-blog.csdnimg.cn/blog_migrate/8caa8760cfb1ddfaf3fc5babe981ba16.png" width="486">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="351" src="https://i-blog.csdnimg.cn/blog_migrate/e9533b4de3005b9b3732d2eecdaf33c8.png" width="485">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="361" src="https://i-blog.csdnimg.cn/blog_migrate/493174d0614b9e6e0cfe2a055c6280a3.png" width="488">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="372" src="https://i-blog.csdnimg.cn/blog_migrate/d941f3a1e913fa9e466c0479db93db16.png" width="488">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;​​​​​​​&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="391" src="https://i-blog.csdnimg.cn/blog_migrate/39ae455527a57db70c6e8456e712d586.png" width="483">&nbsp;</p> 
+         <p></p> 
+         <h3><span style="background-color:#ed7976;">适当的修改和标记指针，为什么要修改和标记指针？</span></h3> 
+         <p>&nbsp;&nbsp;<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;适当修改和标记指针是在启发式搜索过程中对节点指针进行操作</strong></p> 
+         <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;的一种策略。主要的目的是为了记录和更新节点的状态，以便在</strong></p> 
+         <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后续的搜索过程中避免重复扩展同一节点或者更好地利用已有的信息。</strong></p> 
+         <p></p> 
+         <h3><span style="background-color:#ed7976;">修改和标记指针出现的几种情况：</span></h3> 
+         <ol>
+          <li><strong>出现在OPEN表的情况：当一个节点被将要放入OPEN表之前，可以对其指针进行修改和标记。这样做可以更新节点的状态，例如更新节点的优先级、路径成本等，从而影响后续节点的选择。</strong></li>
+          <li><strong>没出现在OPEN表的情况：对于尚未放入OPEN表的节点，可以修改和标记该节点的指针。这样做可以记录节点的状态，例如是否已经被访问过、是否已经生成过等信息，以保证在需要时能正确处理节点。</strong></li>
+          <li><strong>出现在CLOSE表的情况：当一个节点被加入到CLOSE表中时，可以对其指针进行修改和标记。这样做可以标记节点已经被关闭，避免在后续的搜索中再次对该节点进行扩展，从而提高搜索效率。</strong></li>
+         </ol> 
+         <p></p> 
+         <h3><span style="background-color:#ed7976;">实现启发式搜索的三个关键因素：</span></h3> 
+         <div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+         </div> 
+         <div>
+           &nbsp; &nbsp; &nbsp; &nbsp; 
+          <strong>（1）搜索算法的可采纳性（保证找到最小路径）：</strong> 
+         </div> 
+         <div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <img alt="" height="155" src="https://i-blog.csdnimg.cn/blog_migrate/2623fdac62df256e9f97cdc71e99f665.png" width="546"> 
+         </div> 
+         <div></div> 
+         <div>
+           &nbsp; &nbsp; 
+          <strong> &nbsp; &nbsp; （2）启发式函数的影响及其强弱：</strong> 
+         </div> 
+         <div>
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+          <span style="background-color:#ed7976;">&nbsp;启发式函数的强弱及其影响：比如h(x)的强弱对评价函数到底是怎么影响的？</span> 
+         </div> 
+         <div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <img alt="" height="287" src="https://i-blog.csdnimg.cn/blog_migrate/bbe1427fda3e8df047fdbe030c63f19e.png" width="563"> 
+         </div> 
+         <div></div> 
+         <div>
+           &nbsp; 
+          <strong> &nbsp; &nbsp; &nbsp; （3）启发式函数的实用性（启发式函数能够根据实际情况进行调整）</strong> 
+         </div> 
+         <div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          <img alt="" height="346" src="https://i-blog.csdnimg.cn/blog_migrate/a832fd29f7ab7cc31d3b144434d96189.png" width="595"> 
+         </div> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;</p> 
+         <h3>问题规约策略（逆向推理）：&nbsp;</h3> 
+         <p><img alt="" height="206" src="https://i-blog.csdnimg.cn/blog_migrate/ab2744d58c8493d1f653e09ec945595f.png" width="623"></p> 
+         <p></p> 
+         <h3>与或图搜索的概念：</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="279" src="https://i-blog.csdnimg.cn/blog_migrate/cf42afdaeb0ccb42627646d070e0875f.png" width="512"></p> 
+         <h4></h4> 
+         <h3>与或图的实质就是或图的扩展：在与或图中k=1就成了或图</h3> 
+         <p><img alt="" height="472" src="https://i-blog.csdnimg.cn/blog_migrate/ab6bf924f1a34c7a4a664835de72bf7b.png" width="1200"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <h3>A*算法：</h3> 
+         <p>&nbsp;理解几个基本概念：</p> 
+         <p><img alt="" height="161" src="https://i-blog.csdnimg.cn/blog_migrate/2f8b2e56e05b23df6c23a34a316ceb65.png" width="522"></p> 
+         <p><img alt="" height="129" src="https://i-blog.csdnimg.cn/blog_migrate/c11b6992a7c29d1e5d4ce9951c88c5b5.png" width="527"></p> 
+         <p><img alt="" height="54" src="https://i-blog.csdnimg.cn/blog_migrate/82cb53919944270d47efcbaa1ad3cb93.png" width="522">&nbsp;<img alt="" height="210" src="https://i-blog.csdnimg.cn/blog_migrate/587c143acfc2f3fd4dd401562a99c1d7.png" width="516"></p> 
+         <p></p> 
+         <h3>&nbsp;A* 算法的定义：</h3> 
+         <p><img alt="" height="103" src="https://i-blog.csdnimg.cn/blog_migrate/816e409b4d3f8c08c7908d525c50fe43.png" width="510"></p> 
+         <p><img alt="" height="65" src="https://i-blog.csdnimg.cn/blog_migrate/a2b300336471ef2f83e6230a01d95a77.png" width="507"></p> 
+         <p></p> 
+         <h3>k连接的概念：</h3> 
+         <p><img alt="" height="276" src="https://i-blog.csdnimg.cn/blog_migrate/131775f2e0f1c8164ed97da1a816c687.png" width="496"></p> 
+         <p></p> 
+         <h3>解图的概念：与或图中多个或关系 将一个个解图并起来</h3> 
+         <p><img alt="" height="250" src="https://i-blog.csdnimg.cn/blog_migrate/006cce9b58c9bfbf700aeb9f4e3f14bc.png" width="497"></p> 
+         <p></p> 
+         <h3><span style="background-color:#ed7976;">A* 算法和AO*算法的对比：</span></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="300" src="https://i-blog.csdnimg.cn/blog_migrate/54fc4f3a116f97ed7b7c742da94ca5d8.png" width="588"></p> 
+         <h4></h4> 
+         <h2>博弈</h2> 
+         <p></p> 
+         <h3>基本概念：</h3> 
+         <p><img alt="" height="262" src="https://i-blog.csdnimg.cn/blog_migrate/27a3b3f53a9ec2eb22d30cc6a44ecef8.png" width="537"></p> 
+         <p></p> 
+         <h3>&nbsp; 博弈策略：</h3> 
+         <p><img alt="" height="95" src="https://i-blog.csdnimg.cn/blog_migrate/a9d8391d555e00658515c1f93df94267.png" width="543"></p> 
+         <p></p> 
+         <h3>博弈树（先画出树，然后从底部往根节点写MAX 和 MIN相应的节点（MAX取大值，MIN取小值））</h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="219" src="https://i-blog.csdnimg.cn/blog_migrate/0c9457706c58863129e866b45a187b05.png" width="529"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="116" src="https://i-blog.csdnimg.cn/blog_migrate/1e6d93acf01c88af3e2b94f03b323c79.png" width="560"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="331" src="https://i-blog.csdnimg.cn/blog_migrate/b63ba218cccd7bbb3fec80d60c77e420.png" width="564"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <h3><span style="background-color:#ed7976;">博弈搜索练习题</span><img alt="" height="258" src="https://i-blog.csdnimg.cn/blog_migrate/e0575f4408852f52a7d920d4bb156b1a.png" width="1200"></h3> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="background-color:#ed7976;">与取小值 或取大值</span></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="552" src="https://i-blog.csdnimg.cn/blog_migrate/0afcdb87808f7576daa3beabb4a6fd97.jpeg" width="487"></p> 
+         <p></p> 
+         <p></p> 
+         <h3>极大极小过程</h3> 
+         <p><img alt="" height="175" src="https://i-blog.csdnimg.cn/blog_migrate/77bce43d776dfb4540921abdd007d027.png" width="575"></p> 
+         <p><img alt="" height="441" src="https://i-blog.csdnimg.cn/blog_migrate/53f0b30fa5c5b02387d1e6477bcf99e0.png" width="579"></p> 
+         <h4></h4> 
+         <h3>博弈树例题：（残局问题）</h3> 
+         <p><img alt="" height="280" src="https://i-blog.csdnimg.cn/blog_migrate/8ec8b247c69897f126847477ed5b45e7.png" width="574">&nbsp;<img alt="" height="280" src="https://i-blog.csdnimg.cn/blog_migrate/ca74e7840807f455855ac378fcc2959e.png" width="577"></p> 
+         <p><img alt="" height="383" src="https://i-blog.csdnimg.cn/blog_migrate/a1e6eb007b417d4c12be03df58d358d0.png" width="576"></p> 
+         <h4></h4> 
+         <h3><span style="background-color:#ed7976;">阿尔法β过程</span></h3> 
+         <p>max的a值永不降低: a&gt;= ， min节点的贝塔永不增加: 贝塔&lt;=</p> 
+         <p><img alt="" height="98" src="https://i-blog.csdnimg.cn/blog_migrate/e1099408c29eaf1276b23b8c62debce3.png" width="1200"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="373" src="https://i-blog.csdnimg.cn/blog_migrate/f3e398f987ccf4d50c95e7c7213fe2ed.png" width="557"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="471" src="https://i-blog.csdnimg.cn/blog_migrate/9aa1b42a3dce0a2c6d85bcb29481e9ba.png" width="557">&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<img alt="" height="478" src="https://i-blog.csdnimg.cn/blog_migrate/043f131a04c7f88da5cdfb4e23018e6a.png" width="554"></p> 
+         <p></p> 
+         <p></p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">==================第五章 不确定推理=================</span></h2> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;"><strong>这一章主要出现在计算题重点看我手写笔记，（博客笔记只是强调某些概念可看可不看）和后面相应的例题即可</strong></span></h2> 
+         <p></p> 
+         <p><strong>1.不确定推理的实质</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不确定推理就是从不确定的观点出发，运用不确定性的知识，最终推理出具有不确定性但是合理的结论。</p> 
+         <p></p> 
+         <p><strong>2.不确定推理待解决的问题</strong></p> 
+         <p><img alt="" height="205" src="https://i-blog.csdnimg.cn/blog_migrate/4760912c2268ab04da3bdac8bd6347cb.jpeg" width="611"></p> 
+         <p></p> 
+         <p><strong>3.表示问题</strong></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指的是用什么来表示不确定知识。</p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分为数值表示和非数值表示。</p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;专家系统中的不确定性分为规则不确定性和证据不确定性，</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证据不确定性通常用一个数值表示其不确定的程度。</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="333" src="https://i-blog.csdnimg.cn/blog_migrate/9394c37863224367e5f848ab502649d1.jpeg" width="469"></p> 
+         <p></p> 
+         <p><strong>4.计算问题：</strong></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; 在专家给出的规则强度和用户给出的原始证据的不确定基础之上定义的一组函数</p> 
+         <p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;用来度量结论的不确定性。</p> 
+         <p></p> 
+         <p><strong>5.计算问题包括的三个方面：</strong></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="180" src="https://i-blog.csdnimg.cn/blog_migrate/c7ff14bdf57230b8ce47bc5410eaa915.jpeg" width="501">&nbsp;</p> 
+         <p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="221" src="https://i-blog.csdnimg.cn/blog_migrate/e744b3072b9b93bad747d76bd5f49eed.jpeg" width="509"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="229" src="https://i-blog.csdnimg.cn/blog_migrate/059644fddec45a7c5c9105ca24a10b0a.jpeg" width="518">&nbsp;</p> 
+         <p></p> 
+         <p><strong>6.其中组合证据的不确定算法有：</strong></p> 
+         <p><img alt="" height="271" src="https://i-blog.csdnimg.cn/blog_migrate/69f39bb7cef0f6a6c9ee73fcd88652cb.jpeg" width="539"></p> 
+         <p></p> 
+         <p><strong>7.语义问题</strong></p> 
+         <p><img alt="" height="249" src="https://i-blog.csdnimg.cn/blog_migrate/537d4f5677f47128a242df100c157111.jpeg" width="1080"></p> 
+         <p></p> 
+         <p><strong>8. f（H,E）需要理解的实质</strong></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="288" src="https://i-blog.csdnimg.cn/blog_migrate/26171379fac17179dde583200a341785.jpeg" width="516"></p> 
+         <p></p> 
+         <p><span style="color:#fe2c24;"><strong>9.不确定推理的三大方法</strong></span></p> 
+         <p>&nbsp;<img alt="" height="366" src="https://i-blog.csdnimg.cn/blog_migrate/1dd87651b1c91d9794f84d4eb4c8b44d.jpeg" width="515"></p> 
+         <p></p> 
+         <p><span style="color:#fe2c24;"><strong>&nbsp;10.&nbsp;主观Bayes方法</strong></span></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先验概率和后验概率的区别：</p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="272" src="https://i-blog.csdnimg.cn/blog_migrate/a918f1b9e463bdbda736116a9a75efe8.jpeg" width="452"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;">&nbsp;会用条件概率（后验概率）的公式：</span></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<img alt="" height="268" src="https://i-blog.csdnimg.cn/blog_migrate/25644d76c03f587b8cccc48662d78f78.jpeg" width="530"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;">例如：</span></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="305" src="https://i-blog.csdnimg.cn/blog_migrate/4480e3ee2fc3bb15ef83c364291bbbcf.jpeg" width="488"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="" height="285" src="https://i-blog.csdnimg.cn/blog_migrate/6b362d2bf6cf42513aedeb2f5e31a7e1.jpeg" width="456"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color:#fe2c24;">&nbsp;Bayes理论改进：</span></strong></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="386" src="https://i-blog.csdnimg.cn/blog_migrate/0e3fd22e563a41ba2209223c64706c9c.jpeg" width="599"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<img alt="" height="340" src="https://i-blog.csdnimg.cn/blog_migrate/8d42ff985a6dde86bc8014b98321c686.jpeg" width="545"></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总结</p> 
+         <p>&nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="322" src="https://i-blog.csdnimg.cn/blog_migrate/0ed4697b75664d11eace2c1e4c645607.jpeg" width="565"></p> 
+         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img alt="" height="311" src="https://i-blog.csdnimg.cn/blog_migrate/4e412c9b23792e8cb1e7385959b94b95.jpeg" width="541"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;"><strong>Bayes方法</strong></span></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="" height="575" src="https://i-blog.csdnimg.cn/blog_migrate/3e9626f76c47f99eafe5abedd24cd7cc.jpeg" width="1080"></p> 
+         <p></p> 
+         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fe2c24;">&nbsp;&nbsp;例如：</span></p> 
+         <p><img alt="" height="597" src="https://i-blog.csdnimg.cn/blog_migrate/d39ae3f6dba32a55b9d41caa1331a1c8.jpeg" width="1080"></p> 
+         <p><img alt="" height="602" src="https://i-blog.csdnimg.cn/blog_migrate/4e15df414e08cf77371b47bfd9fd3ef5.jpeg" width="1080"></p> 
+         <h2><span style="color:#fe2c24;">例题</span></h2> 
+         <p><img alt="" height="401" src="https://i-blog.csdnimg.cn/blog_migrate/7c9d280760094c1f62336bbd721a8bed.png" width="489"></p> 
+         <p><img alt="" height="224" src="https://i-blog.csdnimg.cn/blog_migrate/6e5b915220ceccef71746f176877abe2.png" width="485"></p> 
+         <p><img alt="" height="79" src="https://i-blog.csdnimg.cn/blog_migrate/0243b6f92dcc08a22d1195838866ed3e.png" width="488"></p> 
+         <h3><span style="color:#fe2c24;"><strong>今年就考的下面这种题</strong></span></h3> 
+         <p><img alt="" height="609" src="https://i-blog.csdnimg.cn/blog_migrate/83498a82f8b6b3e37ce7190b10bfb33a.png" width="468"></p> 
+         <p></p> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">=================第六章 机器学习===================</span></h2> 
+         <h2><span style="color:#fe2c24;">这章主要出现在计算题里面，会利用ID3算法找根节点即可，选择题会考几个概念相关的（参考考点复习即可）。</span></h2> 
+         <p></p> 
+         <h3>1.机器学习的分类</h3> 
+         <p><strong>（按照训练样本提供的信息和反馈的方式不同进行的分类）</strong></p> 
+         <p><img alt="" height="290" src="https://i-blog.csdnimg.cn/blog_migrate/ffacbb30a1a2abe7deb9d29432115d0a.png" width="578"></p> 
+         <p>&nbsp;<img alt="" height="292" src="https://i-blog.csdnimg.cn/blog_migrate/cccebb64c50f8aa8214b4d0273639f23.png" width="576"></p> 
+         <p><img alt="" height="291" src="https://i-blog.csdnimg.cn/blog_migrate/920e7a53565d20a21e265a15ac970cda.png" width="584"></p> 
+         <h4></h4> 
+         <p></p> 
+         <h2><span style="color:#fe2c24;">=====================笔记大全=====================</span></h2> 
+         <h3>涵盖：</h3> 
+         <ul>
+          <li>第二章（知识表示）</li>
+          <li>第三章（确定性推理）</li>
+          <li>第五章（不确定推理）</li>
+          <li>第六章（机器学习）</li>
+         </ul> 
+         <p></p> 
+         <h3>第二章（知识表示）</h3> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/5520a51e75e6ae7d65e6d6c0f01ad7e0.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/630a7cefb6a787d17557d45a94c1b226.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/16fe4ac0ebb5867fa9f94bde75fd9661.jpeg" width="1200"></p> 
+         <h3>&nbsp;第三章（确定性推理）</h3> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/e865404bcc98a9bba4ac45c7770c940b.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/61c8c3ae42d4fe593cf01e8092825986.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/ccd4a3b64513b555ec9f579919b3c4e7.jpeg" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/2102ae0fb12d998a804f3b6d4d5881ba.jpeg" width="1200"></p> 
+         <h3>&nbsp;第五章（不确定推理）</h3> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/6ef3378823f7d37816bc12c2d0738cc8.jpeg" width="1200"></p> 
+         <p></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/17cd62413c00040dec45cc7fbb3a1c23.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/93b9b076b3eb3c207bac6ad6e3ff17a7.jpeg" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/22260143a1bf01d00ecdba4d65d53a5a.jpeg" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/4faf34100eddec846e78e82185331bfb.jpeg" width="1200"></p> 
+         <h3><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/84c6c4e789a632f344bd40d7dc3b4d56.jpeg" width="1200"></h3> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/720bf2af62cc84509b2a11c0264eff12.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/685b6a045544ac019c38f4e7b02a0950.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/0d5e45cd6a9fc1f15d21493c1582588e.jpeg" width="1200"></p> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/6c6dade0d05eda69ca2f01f5309c7f73.jpeg" width="1200"></p> 
+         <p></p> 
+         <h3>&nbsp;第六章（机器学习）</h3> 
+         <p><img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/b0b69195f5e04ef8daee7757403cf4f2.jpeg" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/d0ce03e8533dff22f93a2a3d6ff70594.jpeg" width="1200"></p> 
+         <p>&nbsp;<img alt="" height="1200" src="https://i-blog.csdnimg.cn/blog_migrate/dd60cb8a06cf4b0a748273f2266d40c6.jpeg" width="1200"></p> 
+         <h4></h4> 
+         <h2>&nbsp;最后真心祝愿各位学弟学妹们高分拿下！！！</h2> 
+        </div> 
+       </div> 
+      </article>  
+     </div> 
+     <div class="directory-boxshadow-dialog" style="display:none;"> 
+      <div class="directory-boxshadow-dialog-box"> 
+      </div> 
+      <div class="vip-limited-time-offer-box-new" id="vip-limited-time-offer-box-new"> 
+       <img class="limited-img limited-img-new" src="https://csdnimg.cn/release/blogv2/dist/pc/img/vip-limited-close-newWhite.png"> 
+       <div class="vip-limited-time-top">
+         确定要放弃本次机会？ 
+       </div> 
+       <span class="vip-limited-time-text">福利倒计时</span> 
+       <div class="limited-time-box-new"> 
+        <span class="time-hour"></span> 
+        <i>:</i> 
+        <span class="time-minite"></span> 
+        <i>:</i> 
+        <span class="time-second"></span> 
+       </div> 
+       <div class="limited-time-vip-box"> 
+        <p> <img class="coupon-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/vip-limited-close-roup.png"> <span class="def">立减 ¥</span> <span class="active limited-num"></span> </p> 
+        <span class="">普通VIP年卡可用</span> 
+       </div> 
+       <a class="limited-time-btn-new" href="https://mall.csdn.net/vip" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.9621&quot;}" data-report-query="spm=1001.2101.3001.9621">立即使用</a> 
+      </div> 
+     </div> 
+     <div class="more-toolbox-new more-toolbar" id="toolBarBox"> 
+      <div class="left-toolbox"> 
+       <div class="toolbox-left"> 
+        <div class="profile-box"> 
+         <a class="profile-href" target="_blank" href="https://blog.csdn.net/Luxmlb"><img class="profile-img" src="https://profile-avatar.csdnimg.cn/37380d8187e9495baf0be7dd68792fbb_luxmlb.jpg!1"> <span class="profile-name"> Luxmlb </span> </a> 
+        </div> 
+        <div class="profile-attend"> 
+         <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;" data-report-view="{&quot;mod&quot;:&quot;1592215036_002&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;extend1&quot;:&quot;已关注&quot;}">已关注</a> 
+         <a class="tool-item-follow active-animation" style="display:none;">已关注</a> 
+        </div> 
+       </div> 
+       <div class="toolbox-middle"> 
+        <ul class="toolbox-list"> 
+         <li class="tool-item tool-item-size tool-active is-like" id="is-like" data-type="bottom"> <a class="tool-item-href"> <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt=""> <img class="isactive" style="display:none" id="is-like-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/like-active.png" alt=""> <img class="isdefault" style="display:block" id="is-like-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/like.png" alt=""> <span id="spanCount" class="count "> 36 </span> </a> 
+          <div class="tool-hover-tip">
+           <span class="text space">点赞</span>
+          </div> </li> 
+         <li class="tool-item tool-item-size tool-active is-unlike" id="is-unlike"> <a class="tool-item-href"> <img class="isactive" style="margin-right:0px;display:none" id="is-unlike-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/unlike-active.png" alt=""> <img class="isdefault" style="margin-right:0px;display:block" id="is-unlike-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/unlike.png" alt=""> <span id="unlikeCount" class="count "></span> </a> 
+          <div class="tool-hover-tip">
+           <span class="text space">踩</span>
+          </div> </li> 
+         <li class="tool-item tool-item-size tool-active is-collection "> <a class="tool-item-href" href="javascript:;" data-report-click="{&quot;mod&quot;:&quot;popu_824&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4130&quot;,&quot;ab&quot;:&quot;new&quot;}"> <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/collect-active.png" alt=""> <img class="isdefault" id="is-collection-img" style="display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/collect.png" alt=""> <img class="isactive" id="is-collection-imgactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectActive.png" alt=""> <span class="count get-collection " data-num="95" id="get-collection"> 95 </span> </a> 
+          <div class="tool-hover-tip collect"> 
+           <div class="collect-operate-box"> 
+            <span class="collect-text" id="is-collection"> 收藏 </span> 
+           </div> 
+          </div> 
+          <div class="tool-active-list"> 
+           <div class="text">
+             觉得还不错? 
+            <span class="collect-text" id="tool-active-list-collection"> 一键收藏 </span> 
+            <img id="tool-active-list-close" src="https://csdnimg.cn/release/blogv2/dist/pc/img/collectionCloseWhite.png" alt=""> 
+           </div> 
+          </div> </li> 
+         <li class="tool-item tool-item-size tool-active tool-item-comment"> 
+          <div class="guide-rr-first"> 
+           <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/guideRedReward01.png" alt=""> 
+           <button class="btn-guide-known">知道了</button> 
+          </div> <a class="tool-item-href go-side-comment" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.7009&quot;}"> <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/comment.png" alt=""> <span class="count"> 0 </span> </a> 
+          <div class="tool-hover-tip">
+           <span class="text space">评论</span>
+          </div> </li> 
+         <li class="tool-item tool-item-size tool-active tool-QRcode" data-type="article" id="tool-share"> <a class="tool-item-href" href="javascript:;" data-report-view="{&quot;spm&quot;:&quot;3001.4129&quot;,&quot;extra&quot;:{&quot;type&quot;:&quot;blogdetail&quot;}}"> <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/share.png" alt=""> <span class="count">分享</span> </a> 
+          <div class="QRcode active" id="tool-QRcode"> 
+           <div class="share-bg-box"> 
+            <div class="share-content"> 
+             <a id="copyPosterUrl" data-type="link" class="btn-share">复制链接</a> 
+            </div> 
+            <div class="share-content"> 
+             <a class="btn-share" data-type="qq">分享到 QQ</a> 
+            </div> 
+            <div class="share-content"> 
+             <a class="btn-share" data-type="weibo">分享到新浪微博</a> 
+            </div> 
+            <div class="share-code"> 
+             <div class="share-code-box" id="shareCode"></div> 
+             <div class="share-code-text"> 
+              <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/share/icon-wechat.png" alt="">扫一扫 
+             </div> 
+            </div> 
+           </div> 
+          </div> </li> 
+         <li class="tool-item tool-item-size tool-active is-more" id="is-more"> <a class="tool-item-href"> <img class="isdefault" style="margin-right:0px;display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/more.png" alt=""> <span class="count"></span> </a> 
+          <div class="more-opt-box"> 
+           <div class="mini-box"> 
+            <a class="tool-item-href" id="toolReportBtnHide"> <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png" alt=""> <span class="count">举报</span> </a> 
+           </div> 
+           <div class="normal-box"> 
+            <a class="tool-item-href" id="toolReportBtnHideNormal"> <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png" alt=""> <span class="count">举报</span> </a> 
+           </div> 
+          </div> </li> 
+        </ul> 
+       </div> 
+       <div class="toolbox-right"> 
+        <div class="tool-directory"> 
+         <a class="bt-columnlist-show" data-id="12345227" data-free="true" data-description="本专栏主要收录一些大学课程，帮助广大计科学子更好掌握课程知识" data-subscribe="false" data-title="计算机工科课程集" data-img="https://i-blog.csdnimg.cn/columns/default/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_224,w_224" data-url="https://blog.csdn.net/luxmlb/category_12345227.html" data-sum="3" data-people="2" data-price="0" data-hotrank="0" data-status="true" data-oldprice="0" data-join="false" data-studyvip="true" data-studysubscribe="false" data-report-view="{&quot;spm&quot;:&quot;1001.2101.3001.6334&quot;,&quot;extend1&quot;:&quot;专栏目录&quot;}" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.6334&quot;,&quot;extend1&quot;:&quot;专栏目录&quot;}">专栏目录</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div>    
+     <a id="commentBox" name="commentBox"></a> 
+    </main> 
+   </div> 
+   <div class="recommend-right1  align-items-stretch clearfix" id="rightAsideConcision" data-type="recommend"> 
+    <aside class="recommend-right_aside"> 
+     <div id="recommend-right-concision"> 
+      <div class="flex-column aside-box groupfile" id="groupfileConcision"> 
+       <div class="groupfile-div1"> 
+        <h3 class="aside-title">目录</h3> 
+        <div class="align-items-stretch group_item"> 
+         <div class="pos-box"> 
+          <div class="scroll-box"> 
+           <div class="toc-box"></div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </aside> 
+   </div> 
+  </div> 
+  <div class="mask-dark"></div> 
+  <div class="skin-boxshadow"></div> 
+  <div class="directory-boxshadow"></div> 
+  <div style="display:none;"> 
+   <img src="" onerror="setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){var test=&quot;\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74&quot;}},3000);"> 
+  </div> 
+  <div class="keyword-dec-box" id="keywordDecBox"></div> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/chart/chart.css">        
+  <link rel="stylesheet" href="https://g.csdnimg.cn/lib/cboxEditor/1.1.6/embed-editor.min.css"> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-dark.css">                  
+ </body>
+</html>
